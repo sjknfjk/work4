@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.work4.mapper.UserMapper">
+    <insert id="regist" parameterType="User" >
+        insert into users(username,password) values(#{username},#{password});
+    </insert>
+    <select id="login" resultType="User">
+        select * from users where username = #{username} and password = #{password};
+    </select>
+    <select id="getInfo" resultType="User">
+        select * from users where id = #{id};
+    </select>
+    <select id="getInfoByName" resultType="User">
+        select * from users where username = #{username};
+    </select>
+    <update id="updateUserName" parameterType="User">
+        update users set username=#{username} where id=#{id}
+    </update>
+    <update id="updatePassword" parameterType="User">
+        update users set password=#{password} where id=#{id}
+    </update>
+    <update id="updateAvatar_url" parameterType="User">
+        update users set avatar_url=#{avatar_url} where id=#{id}
+    </update>
+    <select id="personalArticle" resultType="com.example.work4.domain.Article">
+        select * from articles where auther_id= #{auther_id}
+        order by update_time desc limit #{num},#{size};
+    </select>
+    <select id="likeArticle" resultType="com.example.work4.domain.Article">
+        select articles.* from articles
+        left join likes on articles.id=likes.article_id
+        left join users on users.id=likes.user_id
+        where likes.user_id=#{user_id}
+        order by articles.update_time desc limit #{num},#{size};
+    </select>
+</mapper>

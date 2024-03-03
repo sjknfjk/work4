@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.work4.mapper.LikeMapper">
+    <insert id="add" >
+        insert likes(user_id,article_id,comment_id) values(#{user_id},#{article_id},#{comment_id})
+    </insert>
+    <delete id="delete">
+        delete from likes where user_id=#{user_id} and article_id=#{article_id} and comment_id=#{comment_id}
+    </delete>
+    <update id="addArticleLike">
+        update articles set likenum=likenum+1 where id=#{id}
+    </update>
+    <update id="cancelArticleLike">
+        update articles set likenum=likenum-1 where id=#{id}
+    </update>
+    <update id="addCommentLike">
+        update comments set likenum=likenum+1 where id=#{id}
+    </update>
+    <update id="cancelCommentLike">
+        update comments set likenum=likenum-1 where id=#{id}
+    </update>
+</mapper>

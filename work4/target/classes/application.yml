@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: T516822
+    url: jdbc:mysql://localhost:3306/work4?useUnicode=true&characterEncoding=utf8&useSSL=true
+
+mybatis:
+  type-aliases-package: com.example.work4.domain
+  mapper-locations: classpath:mybatis.mapper/*.xml
+

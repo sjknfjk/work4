@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.work4.mapper.ArticleMapper">
+    <insert id="publish" parameterType="Article" >
+        insert into articles(auther_id,cover_url,title,content)
+        values(#{auther_id},#{cover_url},#{title},#{content});
+    </insert>
+    <select id="clickRank" resultType="Article">
+        select * from articles order by clicknum desc limit #{size};
+    </select>
+    <select id="timeRank" resultType="Article">
+        select * from articles order by update_time desc limit #{num},#{size};
+    </select>
+    <select id="recommendRank" resultType="Article">
+        select * from articles order by clicknum desc limit #{num},#{size};
+    </select>
+    <select id="getInfo" resultType="Article">
+        select * from articles where title=#{title};
+    </select>
+    <update id="updateClick">
+        update articles set clicknum=clicknum+1 where id=#{id}
+    </update>
+    <select id="searchArticle" resultType="Article">
+        select * from articles where title like concat('%',#{keyword},'%')
+        order by update_time desc limit #{num},#{size};
+    </select>
+</mapper>
