@@ -17,7 +17,7 @@ DROP TABLE IF EXISTS articles;
 
 CREATE TABLE articles (
   id INT NOT NULL AUTO_INCREMENT,
-  auther_id INT NOT NULL,
+  auther_name VARCHAR(255) NOT NULL,
   cover_url VARCHAR(255) NOT NULL,
   title VARCHAR(255) NOT NULL,
   content TEXT NOT NULL,
@@ -28,20 +28,20 @@ CREATE TABLE articles (
   PRIMARY KEY (id)
 ) ENGINE=INNODB DEFAULT CHARSET=utf8mb3;
 
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com','百度','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('2','www.baidu.com1','百度1','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('2','www.baidu.com2','百度2','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('2','www.baidu.com3','百度3','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com4','百度4','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('2','www.baidu.com5','百度5','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com6','百度6','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com7','百度7','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com8','百度8','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com9','百度9','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com10','百度10','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com11','百度11','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com12','百度12','jsaljdflkjakfjk1');
-INSERT INTO articles(auther_id,cover_url,title,content) VALUES ('1','www.baidu.com13','百度13','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com','百度','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com1','百度1','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com2','百度2','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com3','百度3','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com4','百度4','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com5','百度5','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com6','百度6','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com7','百度7','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com8','百度8','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com9','百度9','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com10','百度10','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com11','百度11','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com12','百度12','jsaljdflkjakfjk1');
+INSERT INTO articles(auther_name,cover_url,title,content) VALUES ('jiuxia211','www.baidu.com13','百度13','jsaljdflkjakfjk1');
 
 DROP TABLE IF EXISTS comments;
 
