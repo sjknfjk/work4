@@ -37,7 +37,7 @@ public class UserServiceImpl implements UserService {
             if (user != null) {
                 result.setMsg("用户名已存在");
             }else {
-                userMapper.regist(user);
+                userMapper.regist(username,password);
                 result.setMsg("注册成功");
                 result.setCode(10000);
                 result.setData(user);
