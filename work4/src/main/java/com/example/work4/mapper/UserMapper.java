@@ -9,7 +9,7 @@ import java.util.List;
 @Mapper
 @Repository
 public interface UserMapper {
-    void regist(User user);
+    void regist(String username,String password);
     User login(String username,String password);
     User getInfo(int id);
     User getInfoByName(String username);
