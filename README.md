@@ -17,3 +17,7 @@
 在springboot上启动程序后，接口功能已经在apifox上通过了测试
 
 目前后端程序已经部署，但部署后的程序没能成功测试，会出现无法打开网页的情况。
+
+公网ip:116.62.208.74
+
+apifox链接：https://apifox.com/apidoc/shared-86e5300f-2048-4f80-a17f-ead4019fab61
