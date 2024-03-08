@@ -16,12 +16,12 @@ import javax.servlet.http.HttpServletRequest;
 public class UserController {
     @Autowired
     private UserService userService;
-    @PostMapping("/register")
+    @GetMapping("/register")
     public Result regist(String username,String password){
         log.debug("注册");
         return userService.regist(username, password);
     }
-    @PostMapping("/login")
+    @GetMapping("/login")
     public Result login(@RequestParam String username, @RequestParam String password){
         log.debug("登陆");
         return userService.login(username, password);
