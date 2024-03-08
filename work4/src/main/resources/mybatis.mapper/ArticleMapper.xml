@@ -5,8 +5,8 @@
 
 <mapper namespace="com.example.work4.mapper.ArticleMapper">
     <insert id="publish" parameterType="Article" >
-        insert into articles(auther_id,cover_url,title,content)
-        values(#{auther_id},#{cover_url},#{title},#{content});
+        insert into articles(auther_name,cover_url,title,content)
+        values(#{auther_name},#{cover_url},#{title},#{content});
     </insert>
     <select id="clickRank" resultType="Article">
         select * from articles order by clicknum desc limit #{size};
