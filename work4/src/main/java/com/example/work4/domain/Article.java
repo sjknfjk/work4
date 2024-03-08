@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Article {
     private int id;
-    private int auther_id;
+    private String auther_name;
     private String cover_url;
     private String title;
     private String content;
@@ -20,8 +20,8 @@ public class Article {
     private int likenum=0;
     private String update_time;
 
-    public Article(int auther_id, String cover_url, String title, String content) {
-        this.auther_id = auther_id;
+    public Article(String auther_name,String cover_url, String title, String content) {
+        this.auther_name=auther_name;
         this.cover_url = cover_url;
         this.title = title;
         this.content = content;
