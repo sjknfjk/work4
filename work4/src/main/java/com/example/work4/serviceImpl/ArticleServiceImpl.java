@@ -27,7 +27,7 @@ public class ArticleServiceImpl implements ArticleService {
         try {
             String token=request.getHeader("token");
             User user= (User) redisTemplate.opsForValue().get(token);
-            Article article=new Article(user.getId(),cover_url,title,content);
+            Article article=new Article(user.getUsername(), cover_url,title,content);
             articleMapper.publish(article);
             result.setMsg("发布成功");
             result.setCode(10000);
